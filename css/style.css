@@ -27,7 +27,8 @@ nav {
   flex-wrap: wrap;
   gap: 1rem;
   border-bottom: 1px solid black;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgb(48, 7, 87);
 }
 a {
   font-size: 1.5rem;
@@ -35,6 +36,7 @@ a {
   padding: 1rem;
   border-radius: 0.2rem;
   box-shadow: 1px 1px 3px 0px rgb(60, 26, 75);
+  background-color: rgb(95, 19, 167);
 }
 a:hover {
   background-color: black;
@@ -51,4 +53,7 @@ a:hover {
 }
 #grey {
   color: grey;
+}
+fieldset{
+  width: 20rem;
 }
