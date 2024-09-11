@@ -27,6 +27,7 @@
         <a href="#get">GET</a>
         <a href="#post">POST</a>
         <a href="#ejercicios">Ejercicios</a>
+        <a href="#matrices">Matrices</a>
     </nav>
     <div class="container">
         <h1>Desarrollo Web con PHP</h1>

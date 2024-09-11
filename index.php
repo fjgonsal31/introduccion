@@ -398,17 +398,6 @@ echo '--------------------------------------';
 echo '<br>';
 // --------------------------------------
 
-// crea un array con el contenido de la siguiente tabla
-// ACCION   AVENTURA    DEPORTES
-// gta      assasins    fifa 19
-// cod      crash       pes 19
-// pubg     pop         moto gp 19
-
-// $array = [
-//     'nombres' => ['accion', 'aventura', 'deportes'],
-//     'juegos' => ['gta', 'assasins', 'fifa 19', 'cod', 'crash', 'pes 19', 'pubg', 'pop', 'moto gp 19']
-// ];
-
 $array = [
     'accion' => ['gta', 'cod', 'pubg'],
     'aventura' => ['assasins', 'crash', 'pop'],
@@ -419,29 +408,11 @@ $maxArray = max(array_map('count', $array));
 echo "<table border='1'>";
 echo "<tr>";
 
-// foreach ($array['nombres'] as $key => $nombre) {
-//     echo "<th style='width: 6rem; text-align: start;'>" . strtoupper($nombre) . "</th>";
-// }
-
 foreach ($array as $key => $nombre) {
     echo "<th style='width: 6rem; text-align: start;'>" . strtoupper($key) . "</th>";
 }
 
 echo "</tr>";
-
-// $row = ceil(count($array['juegos']) / count($array['nombres']));
-// $cont = 0;
-
-// for ($i = 0; $i < $row; $i++) {
-//     echo "<tr>";
-
-//     foreach ($array['nombres'] as $key => $nombre) {
-//         $index = $i * count($array['nombres']) + $key;
-//         echo isset($array['juegos'][$index]) ? "<td>" . $array['juegos'][$index] . "</td>" : "<td></td>";
-//     }
-
-//     echo "</tr>";
-// }
 
 for ($i = 0; $i < $maxArray; $i++) {
     echo "<tr>";
@@ -457,5 +428,64 @@ for ($i = 0; $i < $maxArray; $i++) {
 }
 
 echo "</table>";
+// --------------------------------------
+
+echo '<h2 id="matrices">Matrices</h2>';
+
+$array = [0, 1, 2,];
+
+echo '<pre>';
+var_dump($array);
+echo '</pre>';
+
+for ($i = 0; $i < count($array); $i++) {
+    echo $array[$i] . '<br>';
+}
+
+echo '<br>';
+
+$array = [
+    ['Hola', 'me', 'llamo'],
+    ['Fran', 'y', 'estoy'],
+    ['en', 'clase', 'ahoramismo.']
+];
+
+for ($i = 0; $i < count($array); $i++) {
+    for ($j = 0; $j < count($array[$i]); $j++) {
+        echo 'indice: ' . $i . '-' . $j . ', valor: ' . $array[$i][$j] . '<br>';
+    }
+}
+
+echo '<br>';
+
+echo '<table border="1">';
+
+echo '<thead>';
+echo '<tr>';
+echo "<th style='width: 6rem; text-align: start;'>";
+echo 'primero';
+echo '</th>';
+echo "<th style='width: 6rem; text-align: start;'>";
+echo 'segundo';
+echo '</th>';
+echo "<th style='width: 6rem; text-align: start;'>";
+echo 'tercero';
+echo '</th>';
+echo '</thead>';
+
+echo '<tbody>';
+
+for ($i = 0; $i < count($array); $i++) {
+    echo '<tr>';
+
+    for ($j = 0; $j < count($array[$i]); $j++) {
+        echo '<td>' . $array[$i][$j] . '</td>';
+    }
+
+    echo '</tr>';
+}
+
+echo '</tbody>';
+echo '</table>';
 
 include 'includes/footer.php';
